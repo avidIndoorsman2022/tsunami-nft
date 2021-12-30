@@ -14,11 +14,16 @@ Metaplex is comprised of two core components: an on-chain program, and a self-ho
 
 Tsunami is a customization of this front end web3 application.
 
-## ******** UPDATE **********
-11/29/2021 - We were able to fetch the price of SOL from Chainlink!  For our demo, we simply assumed that each NFT has a price of 1 SOL.  BUT, the problem is that the price of SOL varies from minute to minute.  Therefore, we display the price of the NFT as 1 SOL and incldue the price in USD right next to the price.  
-  In order to demonstrate the Chainlink API calls, the NFT must be displayed (under My Items...Owned).  Once the price is displayed, the entire page needs to be refreshed in order to see the newly updated price since the SOL price is only updated once (upon page load).  
-  All the relevant code is contained in metaplex/js/packages/web/src/views/artworks/.  This isn't optimal but we were under a tight deadline.
-  
+## **\*\*\*\*** UPDATE ****\*\*****
+
+12/30/2021 - Added a home page showing the different types of NFTs (images, audio, game NFTs, etc). This main landing page is shown in Tsunami-Home.png. Tsunami-Home2.png shows the NFT Images card, and when clicked shows the available NFT collections (Tsunami-NFT-Images.png).
+
+## **\*\*\*\*** UPDATE ****\*\*****
+
+11/29/2021 - We were able to fetch the price of SOL from Chainlink! For our demo, we simply assumed that each NFT has a price of 1 SOL. BUT, the problem is that the price of SOL varies from minute to minute. Therefore, we display the price of the NFT as 1 SOL and incldue the price in USD right next to the price.  
+ In order to demonstrate the Chainlink API calls, the NFT must be displayed (under My Items...Owned). Once the price is displayed, the entire page needs to be refreshed in order to see the newly updated price since the SOL price is only updated once (upon page load).  
+ All the relevant code is contained in metaplex/js/packages/web/src/views/artworks/. This isn't optimal but we were under a tight deadline.
+
 ## Important NOTE
 
 Metaplex now follows a release versioning process called semantic versioning. If you are make a new market place, launching a candy machine or any live project that will handle real money, we recommend using a release tag. Using a release tag will ensure that new changes don't break your UI.
@@ -26,13 +31,14 @@ Metaplex now follows a release versioning process called semantic versioning. If
 https://github.com/metaplex-foundation/metaplex/releases
 
 ### How to checkout a release
+
 ```
 //If you are using a fork
 git fetch upstream --tags
 
 git checkout tags/<tag> // this will bring the contents of the tag into your current branch
 
-// OR 
+// OR
 git checkout tags/<tag> -b <your local branch name> // this will make a new branch for you
 
 To swich to a new release
